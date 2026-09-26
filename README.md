@@ -133,14 +133,5 @@ ai-code-explainer/
 
 ---
 
-## 💼 Front-End Interview Talking Points
-
-- **Component Decoupling**: State flows downwards through props while custom events trigger handlers in `App.jsx`, ensuring modularity and testability.
-- **Defensive Error Handling**: Handled HTTP 401 (unauthorized), 429 (rate-limited), network disconnects, and empty responses with actionable UI error states.
-- **Performance Optimization**: Clean cleanup routines on `useEffect` timers and unmounted `speechSynthesis` instances to prevent memory leaks.
-- **Accessibility & UX**: Clear contrast ratios, keyboard-friendly navigation (`Ctrl+Enter`), responsive layout across mobile and 4K displays.
-
----
-
 ## 📜 License
 MIT License. Feel free to use this project as inspiration or part of your developer portfolio!
