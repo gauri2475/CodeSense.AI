@@ -27,7 +27,7 @@ const handleSearch = debounce((query) => {
     purpose: "Regulates high-frequency event firing by delaying execution until a period of inactivity has elapsed, optimizing client performance and network bandwidth.",
     mockExplanation: {
       beginner: `### 🎯 Simple Summary
-This code is a **Debounce** utility. Think of it like an elevator: instead of closing immediately when one person steps in, it waits a few seconds. If someone else runs in, the timer resets. It on[...]
+This code is a **Debounce** utility. Think of it like an elevator: instead of closing immediately when one person steps in, it waits a few seconds. If someone else runs in, the timer resets. It only moves once people stop entering!
 
 ---
 
@@ -65,17 +65,11 @@ An implementation of a higher-order **Debounce** function in JavaScript leveragi
 ---
 
 ### ⚠️ Potential Edge Cases & Improvements
-1. **Immediate Execution (Leading vs. Trailing)**: Currently only handles *trailing* edge. Adding an \`immediate: boolean\` flag would allow firing instantly on the first trigger and debouncing su[...]
+1. **Immediate Execution (Leading vs. Trailing)**: Currently only handles *trailing* edge. Adding an \`immediate: boolean\` flag would allow firing instantly on the first trigger and debouncing subsequent ones.
 2. **Cancellation Method**: Attaching a \`.cancel()\` method to the returned function allows React components to cancel pending timers in \`useEffect\` cleanup functions.`
- 
-  
-
-# Example
-numbers = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
-print("Found at index:", binary_search(numbers, 23))`,
-    purpose: "Locates a target integer in a sorted sequence in logarithmic O(log N) time by repeatedly dividing the remaining search space in half.",
-    mockExplanation: {
-    {
+    }
+  },
+  {
     id: 'py-binary-search',
     name: 'Python • Binary Search',
     language: 'python',
@@ -96,10 +90,14 @@ print("Found at index:", binary_search(numbers, 23))`,
             right = mid - 1
 
     return -1
-   }
-  },
+
+# Example
+numbers = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+print("Found at index:", binary_search(numbers, 23))`,
+    purpose: "Locates a target integer in a sorted sequence in logarithmic O(log N) time by repeatedly dividing the remaining search space in half.",
+    mockExplanation: {
       beginner: `### 🎯 Simple Summary
-Imagine looking for a word in a physical dictionary. You don't read page by page from the beginning! Instead, you flip directly to the middle. If your word comes after, you throw away the first h[...]
+Imagine looking for a word in a physical dictionary. You don't read page by page from the beginning! Instead, you flip directly to the middle. If your word comes after, you throw away the first half and repeat. That's exactly what **Binary Search** does!
 
 ---
 
@@ -131,7 +129,7 @@ Logarithmic time scaling means searching through 1,000,000 items takes at most ~
 ---
 
 ### ⚡ Interview Discussion Points
-- **Why \`left + (right - left) // 2\` instead of \`(left + right) // 2\`?** While Python 3 supports arbitrary-precision integers, this idiom is standard best-practice to prevent integer overflow[...]
+- **Why \`left + (right - left) // 2\` instead of \`(left + right) // 2\`?** While Python 3 supports arbitrary-precision integers, this idiom is standard best-practice to prevent integer overflow in languages like C, C++, and Java.`
     }
   },
   {
@@ -152,7 +150,7 @@ export function useFetch(url) {
 
     fetch(url, { signal: controller.signal })
       .then((res) => {
-        if (!res.ok) throw new Error(\``HTTP error! Status: \${res.status}\``);
+        if (!res.ok) throw new Error(\`HTTP error! Status: \${res.status}\`);
         return res.json();
       })
       .then((jsonData) => {
@@ -176,7 +174,7 @@ export function useFetch(url) {
     purpose: "Manages the asynchronous HTTP lifecycle (loading, data, and error state) while automatically cancelling inflight requests on component unmount via AbortController.",
     mockExplanation: {
       beginner: `### 🎯 Simple Summary
-This is a custom React hook called \`useFetch\`. It acts like an automatic delivery assistant for data: you give it a website URL, and it automatically handles downloading the information, lettin[...]
+This is a custom React hook called \`useFetch\`. It acts like an automatic delivery assistant for data: you give it a website URL, and it automatically handles downloading the information, letting you know if it's currently loading, and warning you if an error happened.
 
 ---
 
@@ -299,5 +297,20 @@ export const EXPLANATION_LEVELS = [
     badge: '⚡ Big-O & Bugs',
     shortBadge: 'Deep Dive',
     desc: 'Time/space complexity, edge cases & optimizations.'
+  },
+  {
+    id: 'code-review',
+    label: 'Clean Code & Best Practices',
+    badge: '✨ Code Review',
+    shortBadge: 'Refactor',
+    desc: 'Refactoring tips, design patterns & code smells.'
+  },
+  {
+    id: 'security',
+    label: 'Bug Hunter & Security Audit',
+    badge: '🛡️ Defensive',
+    shortBadge: 'Security',
+    desc: 'Vulnerabilities, input sanitization & edge cases.'
   }
 ];
+
