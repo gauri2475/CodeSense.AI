@@ -152,7 +152,7 @@ export function useFetch(url) {
 
     fetch(url, { signal: controller.signal })
       .then((res) => {
-        if (!res.ok) throw new Error(\`HTTP error! Status: \${res.status}\`);
+        if (!res.ok) throw new Error(\``HTTP error! Status: \${res.status}\``);
         return res.json();
       })
       .then((jsonData) => {
