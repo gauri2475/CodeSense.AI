@@ -67,9 +67,15 @@ An implementation of a higher-order **Debounce** function in JavaScript leveragi
 ### ⚠️ Potential Edge Cases & Improvements
 1. **Immediate Execution (Leading vs. Trailing)**: Currently only handles *trailing* edge. Adding an \`immediate: boolean\` flag would allow firing instantly on the first trigger and debouncing su[...]
 2. **Cancellation Method**: Attaching a \`.cancel()\` method to the returned function allows React components to cancel pending timers in \`useEffect\` cleanup functions.`
-    }
-  },
-  {
+ 
+  
+
+# Example
+numbers = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+print("Found at index:", binary_search(numbers, 23))`,
+    purpose: "Locates a target integer in a sorted sequence in logarithmic O(log N) time by repeatedly dividing the remaining search space in half.",
+    mockExplanation: {
+    {
     id: 'py-binary-search',
     name: 'Python • Binary Search',
     language: 'python',
@@ -90,12 +96,8 @@ An implementation of a higher-order **Debounce** function in JavaScript leveragi
             right = mid - 1
 
     return -1
-
-# Example
-numbers = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
-print("Found at index:", binary_search(numbers, 23))`,
-    purpose: "Locates a target integer in a sorted sequence in logarithmic O(log N) time by repeatedly dividing the remaining search space in half.",
-    mockExplanation: {
+   }
+  },
       beginner: `### 🎯 Simple Summary
 Imagine looking for a word in a physical dictionary. You don't read page by page from the beginning! Instead, you flip directly to the middle. If your word comes after, you throw away the first h[...]
 
